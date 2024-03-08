@@ -1,0 +1,10 @@
+Plaintext: b&#39;This is a sample plaintext for
+encryption.\x06\x06\x06\x06\x06\x06&#39;
+ECBCiphertext:5d1a01bd38854fad7fed0f632471959f7c1866d12c2da92
+28e21919244792872fb3a02f16dfae5811baf44a7e031711a
+CBCCiphertext:
+40cf1084f7f20deec9622dc9e354709626ee0c8edb483d0f950a9e656b3
+121998be67be32c3aacafb6ae6fd3d31aa160
+CFBCiphertext:
+56ae78da72bc0b7ce7ec95cc45a30a212a428529ca9beea4ceb263593d3
+3b0702a39a46e81da509704cd91683541bac7
