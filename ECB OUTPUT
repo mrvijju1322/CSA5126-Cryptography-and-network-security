@@ -1,0 +1,6 @@
+ECB Mode:
+Original C1: Hello, this is P1.
+Original C2: And this is P2.
+Transmitted C1 with error: Hello- this is P1.
+Decrypted P1 (with error): Hello- this is P1.
+Decrypted P2: And this is P2.
