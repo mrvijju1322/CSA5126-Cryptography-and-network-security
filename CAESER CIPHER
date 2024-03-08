@@ -1,0 +1,35 @@
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+void caesarEncrypt(char text[], int key) {
+int length = strlen(text);
+
+for (int i = 0; i &lt; length; i++) {
+if (text[i] &gt;= &#39;A&#39; &amp;&amp; text[i] &lt;= &#39;Z&#39;) {
+text[i] = (text[i] - &#39;A&#39; + key) % 26 + &#39;A&#39;;
+}
+else if (text[i] &gt;= &#39;a&#39; &amp;&amp; text[i] &lt;= &#39;z&#39;) {
+text[i] = (text[i] - &#39;a&#39; + key) % 26 + &#39;a&#39;;
+}
+}
+}
+int main() {
+char message[100];
+int key;
+printf(&quot;Enter a message: &quot;);
+fgets(message, sizeof(message), stdin);
+
+printf(&quot;Enter the key (0-25): &quot;);
+scanf(&quot;%d&quot;, &amp;key);
+if (key &lt; 0 || key &gt; 25) {
+
+printf(&quot;Invalid key! Please enter a key between 0 and 25.\n&quot;);
+return 1;
+}
+size_t length = strlen(message);
+if (length &gt; 0 &amp;&amp; message[length - 1] == &#39;\n&#39;) {
+message[length - 1] = &#39;\0&#39;;
+}
+caesarEncrypt(message, key);
+printf(&quot;Encrypted message: %s\n&quot;, message);
+return 0;
+}
