@@ -1,0 +1,7 @@
+Enter the plaintext: hello
+Enter the size of the key matrix: 2
+Enter the key matrix (row by row):
+1 2
+
+2 3
+Encrypted text: PAHDIT
