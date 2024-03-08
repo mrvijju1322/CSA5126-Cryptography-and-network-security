@@ -1,0 +1,40 @@
+def generate_cipher_sequence(keyword):
+keyword = keyword.upper()
+alphabet = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;
+cipher_sequence = &quot;&quot;
+for char in keyword:
+if char not in cipher_sequence:
+cipher_sequence += char
+for char in alphabet:
+if char not in cipher_sequence:
+cipher_sequence += char
+return cipher_sequence
+
+def encrypt(plain_text, cipher_sequence):
+plain_text = plain_text.upper()
+encrypted_text = &quot;&quot;
+for char in plain_text:
+if char.isalpha():
+index = ord(char) - ord(&#39;A&#39;)
+encrypted_text += cipher_sequence[index] else:
+encrypted_text += char
+return encrypted_text
+def decrypt(encrypted_text,
+cipher_sequence): encrypted_text =
+encrypted_text.upper()
+decrypted_text = &quot;&quot;
+for char in encrypted_text:
+if char.isalpha():
+index = cipher_sequence.index(char)
+decrypted_text += chr(index + ord(&#39;A&#39;)) else:
+decrypted_text += char
+return decrypted_text
+keyword = &quot;CIPHER&quot;
+cipher_sequence =
+generate_cipher_sequence(keyword) plain_text =
+&quot;hello world&quot;
+encrypted_text = encrypt(plain_text, cipher_sequence)
+decrypted_text = decrypt(encrypted_text,
+cipher_sequence) print(&quot;Plain Text:&quot;, plain_text)
+print(&quot;Cipher:&quot;, encrypted_text)
+print(&quot;Decrypted Text:&quot;, decrypted_text)
